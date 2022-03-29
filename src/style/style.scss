@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: inherit;
+    font-size: 12px;
+}
+
+#wrapper {
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    background-color: #E5E5E5;
+}
+
+/* sort */
+
+.sort {
+    box-sizing: border-box;
+    padding: 35px 26px 35px 20px ;
+    min-width: 152px;
+    align-items: flex-start;
+    background-color: #BDBDBD;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+/* user-list */
+
+.user-list {
+
+    box-sizing: border-box;
+    width: 100%;
+
+    &__content {
+        padding: 19px 62px 25px 31px;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 1.167em;
+        line-height: 16px;
+        padding-bottom: 17px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+
+    &__item {
+        background-color: #F3F3F3;
+        width: 100%;
+        display: flex;
+        box-sizing: border-box;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    &__data {
+        display: flex;
+        flex-direction: column;
+        row-gap: 7px;
+        flex: 1 0 50%;
+    }
+
+    &__more {
+        flex: 0 1 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-self: flex-end;
+        flex-shrink: 1;
+    }
+
+    &__info {
+        display: flex;
+        column-gap: 7px;
+    }
+
+    &__field {
+        font-weight: 400;
+        font-size: 0.917em;
+        line-height: 13px;
+        color: #A3A3A3;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 0.917em;
+        line-height: 13px;
+        color: #000;
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 1em;
+        line-height: 14px;
+        color: #4B51EF;
+        cursor: pointer;
+    }
+    
+    &__quantity {
+        padding-top: 10px;
+        align-self: flex-end;
+    }
+}
+
+/* blocks */
+
+.container {
+    display: flex;
+    background-color: #fff;
+    width: 665px;
+    margin: 0 auto;
+    flex: 1 0 auto;
+}
+
+.button {
+    box-sizing: border-box;
+    border-style: none;
+    background-color: #4B51EF;
+    border-radius: 5px;
+    padding: 5.02px 15.2px;
+    line-height: 14px;
+    font-style: normal;
+    font-weight: 400;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
