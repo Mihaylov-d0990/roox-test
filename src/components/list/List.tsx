@@ -3,9 +3,13 @@ import UserContext from "../../context/UserContext"
 import ListItem from "./ListItem"
 
 export default function List() {
-
     const { users } = React.useContext(UserContext)
-   
+    
+    React.useEffect(() => {
+        console.log(users);
+        
+    })
+    
     return (
         <div className="user-list">
             <div className="user-list__content">

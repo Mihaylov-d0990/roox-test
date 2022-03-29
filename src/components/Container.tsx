@@ -2,27 +2,16 @@ import React from "react"
 import Sort from './Sort'
 import List from './list/List'
 import UserForm from './userForm/UserForm'
-import ListItemContext from "../context/ListItemContext"
+import UserContext from "../context/UserContext"
 
 export default function Container() {
-
-    const [listVisibility, setListVisibility] = React.useState<boolean>(true)
-    const [formVisibility, setFormVisibility] = React.useState<boolean>(false)
-    const [userID, setUserID] = React.useState<string>("")
-
-    const setID = (id: string) => {
-        setUserID(id)
-        setFormVisibility(formVisibility => !formVisibility)
-        setListVisibility(listVisibility => !listVisibility)
-    } 
+    const { formVisibility, users } = React.useContext(UserContext)
+    console.log(users)
 
     return (
         <div className="container">
-            <Sort />
-            {listVisibility && 
-                <ListItemContext.Provider value={{setID: setID}} >
-                    <List />
-                </ListItemContext.Provider>
+            <Sort />           
+            {!formVisibility && <List />
             }
             {formVisibility && <UserForm />}
         </div>

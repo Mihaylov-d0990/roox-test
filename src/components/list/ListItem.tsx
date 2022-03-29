@@ -1,5 +1,5 @@
 import React from "react"
-import ListItemContext from "../../context/ListItemContext"
+import UserContext from "../../context/UserContext"
 
 interface Item {
     id: string,
@@ -9,8 +9,7 @@ interface Item {
 }
 
 export default function ListItem(props: Item) {
-
-    const { setID } = React.useContext(ListItemContext)
+    const { setID } = React.useContext(UserContext)
 
     return (
         <div className="user-list__item">
